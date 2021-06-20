@@ -33,7 +33,10 @@
                 <p><a href="fc/customerpage">Customer Page</a>
             </c:if>
 
+
+                    <a href="fc/createorderpage">createorder</a>
         </div>
+        <a href="${pageContext.request.contextPath}/fc/createorderpage"></a>
 
     </jsp:body>
 </t:genericpage>
