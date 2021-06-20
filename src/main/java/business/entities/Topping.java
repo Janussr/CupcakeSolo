@@ -1,22 +1,22 @@
 package business.entities;
 
 public class Topping {
-    int toppingId;
+    int id;
     String name;
     double price;
 
-    public Topping(int toppingId, String name, double price) {
-        this.toppingId = toppingId;
+    public Topping(int id, String name, double price) {
+        this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public int getToppingId() {
-        return toppingId;
+    public int getId() {
+        return id;
     }
 
-    public void setToppingId(int toppingId) {
-        this.toppingId = toppingId;
+    public void setId(int toppingId) {
+        this.id = toppingId;
     }
 
     public String getName() {

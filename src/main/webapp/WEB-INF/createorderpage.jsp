@@ -21,9 +21,19 @@
                 Main page for this 2. semester start project used at cphbusiness.dk
             </div>
             <p style="font-size: larger"> Velkommen til create order. </p>
-
-
         </div>
+
+        <c:forEach var="bottoms" items="${requestScope.bottomList}">
+            <tr>
+                <td>${bottoms.id}</td>
+                <td>${bottoms.name}</td>
+                <td>${bottoms.price}</td>
+
+            </tr>
+        </c:forEach>
+        <c:forEach var="bottom" items="${applicationScope.bottomList}">
+            <option value="${bottom.id}">${bottom.name} DKK ${bottom.price},-</option>
+        </c:forEach>
 
     </jsp:body>
 </t:genericpage>
