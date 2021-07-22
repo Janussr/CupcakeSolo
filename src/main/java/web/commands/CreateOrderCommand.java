@@ -18,7 +18,6 @@ public class CreateOrderCommand extends CommandUnprotectedPage {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
 
-        //request.setAttribute("bottomList", cupcakeFacade);
 
         return pageToShow;
     }

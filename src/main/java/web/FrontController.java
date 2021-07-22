@@ -44,7 +44,7 @@ public class FrontController extends HttpServlet
         CupcakeFacade cupcakeFacade = new CupcakeFacade(database);
         try {
             getServletContext().setAttribute("bottomList", cupcakeFacade.getAllBottoms());
-            //getServletContext().setAttribute("toppingList", cupcakeFacade.getAllToppings());
+            getServletContext().setAttribute("toppingList", cupcakeFacade.getAllToppings());
         } catch (
                 UserException | SQLException e) {
             e.printStackTrace();

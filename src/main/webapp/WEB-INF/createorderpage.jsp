@@ -14,26 +14,40 @@
 
     <jsp:body>
 
-        <div>
-            <h2>Our Cool Site</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
 
-            <div style="margin-top: 3em;margin-bottom: 3em;">
-                Main page for this 2. semester start project used at cphbusiness.dk
+                    <p style="font-size: larger"> Velkommen til create order. </p>
+                </div>
+
+                <div class="col-sm">
+                    <select class="form-select" name="bottom" id="bottom">
+                        <option disabled selected value> Vælg Top:</option>
+                        <c:forEach var="topping" items="${applicationScope.toppingList}">
+                            <option value="${topping.id}">
+                                    ${topping.name} DKK
+                                    ${topping.price},-
+                            </option>
+                        </c:forEach>
+                    </select>
+                </div>
+
+
+                <div class="col-sm">
+                    <select class="form-select" name="bottom" id="bottom">
+                        <option disabled selected value> Vælg Bund:</option>
+                        <c:forEach var="bottom" items="${applicationScope.bottomList}">
+                            <option value="${bottom.id}">${bottom.name} DKK ${bottom.price},-</option>
+                        </c:forEach>
+                    </select>
+                </div>
+                <div class="col-sm">
+                <button> tilføj cupcake</button>
+                </div>
             </div>
-            <p style="font-size: larger"> Velkommen til create order. </p>
         </div>
 
-        <c:forEach var="bottoms" items="${requestScope.bottomList}">
-            <tr>
-                <td>${bottoms.id}</td>
-                <td>${bottoms.name}</td>
-                <td>${bottoms.price}</td>
-
-            </tr>
-        </c:forEach>
-        <c:forEach var="bottom" items="${applicationScope.bottomList}">
-            <option value="${bottom.id}">${bottom.name} DKK ${bottom.price},-</option>
-        </c:forEach>
 
     </jsp:body>
 </t:genericpage>
